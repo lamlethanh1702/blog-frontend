@@ -205,7 +205,7 @@ const SidebarHomepage = () => {
               alt={aboutMeBlog.title}
               className="rounded-lg mt-4 mx-auto w-full h-80 object-cover"
             />
-            <h5 className="font-bold text-lg mt-4">Blogger & Youtuber</h5>
+            <h5 className="font-bold text-lg mt-4">Programmer</h5>
             <p className="text-sm mt-4 mb-12">{aboutMeBlog.des}</p>
           </div>
         )}

@@ -6,16 +6,16 @@ import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD9djnWRTKBYdbNzDxsUlBtapAe7z3p8pQ",
-  authDomain: "blog-website-88a4d.firebaseapp.com",
-  projectId: "blog-website-88a4d",
-  storageBucket: "blog-website-88a4d.firebasestorage.app",
-  messagingSenderId: "555469110716",
-  appId: "1:555469110716:web:1bd41ef6712ab87ac6bfb9"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+    apiKey: "AIzaSyD9djnWRTKBYdbNzDxsUlBtapAe7z3p8pQ",
+    authDomain: "blog-website-88a4d.firebaseapp.com",
+    projectId: "blog-website-88a4d",
+    storageBucket: "blog-website-88a4d.firebasestorage.app",
+    messagingSenderId: "555469110716",
+    appId: "1:555469110716:web:1bd41ef6712ab87ac6bfb9"
+  };
+  
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
 const provider = new GoogleAuthProvider();
 
 const auth = getAuth();

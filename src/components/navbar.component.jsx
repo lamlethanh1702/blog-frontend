@@ -32,11 +32,6 @@ const NavbarComponent = () => {
     }
   }, [activeCategory]);
 
-  // const handleCategoryClick = (category) => {
-  //   setActiveCategory(category); // Cập nhật state với category được click
-  //   navigate(`/${category.toLowerCase()}`);
-  // };
-
   const handleCategoryClick = (category) => {
     
     setActiveCategory(category); // Cập nhật state với category được click
@@ -134,7 +129,7 @@ const NavbarComponent = () => {
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
-          <Navbar.Collapse id="responsive-navbar-nav">
+          <Navbar.Collapse >
             <Nav className="me-auto">
             <Nav.Link
               as={Link}
@@ -172,6 +167,15 @@ const NavbarComponent = () => {
               >
                 About Me
               </Nav.Link>
+
+              <Nav.Link
+                href="https://www.youtube.com/@elly.thehyggeexplorer"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="custom-hover capitalize text-center btn-border-bottom"
+              >
+                YouTube
+              </Nav.Link>
             </Nav>
 
             {/* Chỉnh lại phần Sign In/Sign Up để hiển thị đẹp trên mobile */}
@@ -184,6 +188,7 @@ const NavbarComponent = () => {
                     as={NavLink}
                     to="/signin"
                     className="btn btn-dark px-3 my-2 mx-lg-2"
+                    style={{ color: 'white', fontWeight: 'bold' }}
                   >
                     Sign In
                   </Nav.Link>
@@ -191,6 +196,7 @@ const NavbarComponent = () => {
                     as={NavLink}
                     to="/signup"
                     className="btn btn-dark px-3 my-2 mx-lg-2"
+                    style={{ color: 'white', fontWeight: 'bold' }}
                   >
                     Sign Up
                   </Nav.Link>

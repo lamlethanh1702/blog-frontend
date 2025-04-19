@@ -166,17 +166,6 @@ const BlogEditor = () => {
       });
     }
   };
-  let categories = [
-    "programming",
-    "hollywood",
-    "film-making",
-    "social media",
-    "cooking",
-    "technology",
-    "finance",
-    "travel",
-  ];
-
   return (
     <>
       {/* <nav className="navbar">
