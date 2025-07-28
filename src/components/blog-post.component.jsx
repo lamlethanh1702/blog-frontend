@@ -16,7 +16,7 @@ const BlogPostCard = ({ content, author }) => {
   let { fullname = "Unknown Author", profile_img = "", username = "" } = author || {};
   return (
     <Link to={`/blog/${id}`}>
-      <div className="bg-white shadow-md p-4 rounded-lg flex flex-col h-[435px]">
+      <div className="bg-[#b4e7ad] shadow-md p-4 rounded-lg flex flex-col h-[435px]">
         <h4 className="text-2xl font-bold uppercase text-center mb-2 break-words">
           {title}
         </h4>
@@ -43,7 +43,7 @@ const BlogPostCard = ({ content, author }) => {
           {des}
         </p>
 
-        <button className="text-black font-medium px-4 py-2 rounded-md mt-auto flex items-center justify-center gap-2 btn-hover">
+        <button className="bg-[#519e50] text-black btn font-medium px-4 py-2 rounded-md mt-auto flex items-center justify-center gap-2 btn-hover">
           READ MORE
           <span className="text-lg">→</span>
         </button>

@@ -139,10 +139,10 @@ const NavbarComponent = () => {
               }`}
               onClick={() => setActiveCategory("")}
             >
-              Home
+              Trang chủ
             </Nav.Link>
               <NavDropdown
-                title="Blog"
+                title="Bài viết"
                 id="collapsible-nav-dropdown"
                 className="custom-hover text-center btn-border-bottom"
               >
@@ -165,17 +165,10 @@ const NavbarComponent = () => {
                 }`}
                 onClick={() => handleCategoryClick("about me")}
               >
-                About Me
+                Chúng tôi
               </Nav.Link>
 
-              <Nav.Link
-                href="https://www.youtube.com/@elly.thehyggeexplorer"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="custom-hover capitalize text-center btn-border-bottom"
-              >
-                YouTube
-              </Nav.Link>
+              
             </Nav>
 
             {/* Chỉnh lại phần Sign In/Sign Up để hiển thị đẹp trên mobile */}
@@ -187,18 +180,18 @@ const NavbarComponent = () => {
                   <Nav.Link
                     as={NavLink}
                     to="/signin"
-                    className="btn btn-dark px-3 my-2 mx-lg-2"
-                    style={{ color: 'white', fontWeight: 'bold' }}
+                    className=" btn-dark px-3 my-2 mx-lg-2"
+                    style={{ color: 'black', fontWeight: 'medium' }}
                   >
-                    Sign In
+                    Đăng nhập
                   </Nav.Link>
                   <Nav.Link
                     as={NavLink}
                     to="/signup"
-                    className="btn btn-dark px-3 my-2 mx-lg-2"
-                    style={{ color: 'white', fontWeight: 'bold' }}
+                    className=" btn-dark px-3 my-2 mx-lg-2"
+                    style={{ color: 'black', fontWeight: 'medium' }}
                   >
-                    Sign Up
+                    Đăng ký
                   </Nav.Link>
                 </div>
               )}
@@ -212,7 +205,7 @@ const NavbarComponent = () => {
                   to="/editor"
                   className="d-none d-lg-block me-3"
                 >
-                  <i className="fi fi-rr-file-edit me-2"></i>Write
+                  <i className="fi fi-rr-file-edit me-2"></i>Viết bài
                 </Nav.Link>
                 <Link to="/dashboard/notifications" className="me-3">
                   <button className=" w-10 h-10 rounded-full bg-grey relative hover:bg-black/10">

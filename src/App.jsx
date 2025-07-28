@@ -22,33 +22,33 @@ export const UserContext = createContext({});
 
 export const ThemeContext = createContext({});
 
-const darkThemePreference = () =>
-  window.matchMedia("(prefers-color-scheme: dark)").matches;
+// const darkThemePreference = () =>
+//   window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 const App = () => {
   const [userAuth, setUserAuth] = useState({});
 
-  const [theme, setTheme] = useState(() =>
-    darkThemePreference() ? "dark" : "light"
-  );
+  // const [theme, setTheme] = useState(() =>
+  //   darkThemePreference() ? "dark" : "light"
+  // );
 
   useEffect(() => {
     let userInSession = lookInSession("user");
-    let themeInSession = lookInSession("theme");
+    // let themeInSession = lookInSession("theme");
 
     userInSession
       ? setUserAuth(JSON.parse(userInSession))
       : setUserAuth({ access_token: null });
 
-    if (themeInSession) {
-      setTheme(() => {
-        document.body.setAttribute("data-theme", themeInSession);
+    // if (themeInSession) {
+    //   setTheme(() => {
+    //     document.body.setAttribute("data-theme", themeInSession);
 
-        return themeInSession;
-      });
-    } else {
-      document.body.setAttribute("data-theme", theme);
-    }
+    //     return themeInSession;
+    //   });
+    // } else {
+    //   document.body.setAttribute("data-theme", theme);
+    // }
   }, []);
 
   return (

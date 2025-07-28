@@ -130,6 +130,7 @@ const UserAuthForm = ({ type }) => {
                         className="btn-dark center mt-14"
                         type="submit"
                         onClick={handleSubmit}
+                        style={{ color: 'black', fontWeight: 'medium' }}
                     >   
                         { type.replace("-", " ") }
                     </button>
@@ -140,8 +141,8 @@ const UserAuthForm = ({ type }) => {
                         <hr className="w-1/2 border-black" />
                     </div>
 
-                    <button className="btn-dark flex items-center justify-center gap-4 w-[90%] center"
-                        onClick={handleGoogleAuth}
+                    <button className="btn-dark flex items-center justify-center gap-4 w-[90%] center text:black"
+                        onClick={handleGoogleAuth} style={{ color: 'black', fontWeight: 'medium' }}
                     >
                         <img src={googleIcon} className="w-5" />
                         continue with google

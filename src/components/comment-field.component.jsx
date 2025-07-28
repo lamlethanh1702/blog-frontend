@@ -113,7 +113,7 @@ const CommentField = ({
         placeholder="Leave a comment..."
         className="input-box pl-5 placeholder:text-dark-grey resize-none h-[150px] overflow-auto"
       ></textarea>
-      <button className="btn-dark mt-5 px-10" onClick={handleComment}>
+      <button className="btn-dark mt-5 px-10 " onClick={handleComment}>
         {action}
       </button>
     </>
