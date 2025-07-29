@@ -9,6 +9,7 @@ import { storeInSession } from "../common/session";
 import { activeTabRef } from "../components/inpage-navigation.component";
 import { EditorContext } from "../pages/editor.pages";
 import { filterPaginationData } from "../common/filter-pagination-data";
+import logo from '../imgs/logo.png';
 
 const NavbarComponent = () => {
   // const [showUserMenu, setShowUserMenu] = useState(false);
@@ -127,20 +128,30 @@ const NavbarComponent = () => {
         variant="light"
       >
         <Container>
+         
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-
+            
           <Navbar.Collapse >
+             <Navbar.Brand as={Link} to="/">
+            <img
+              src={logo}
+              alt="Logo"
+              height="30"
+              className="flex-none"
+            />
+          </Navbar.Brand>
             <Nav className="me-auto">
-            <Nav.Link
-              as={Link}
-              to="/"
-              className={`custom-hover text-center btn-border-bottom ${
-                activeCategory === "" ? "" : ""
-              }`}
-              onClick={() => setActiveCategory("")}
-            >
-              Trang chủ
-            </Nav.Link>
+              <Nav.Link
+                as={Link}
+                to="/"
+                className={`custom-hover text-center btn-border-bottom ${
+                  activeCategory === "" ? "" : ""
+                }`}
+                onClick={() => setActiveCategory("")}
+              >
+                Trang chủ
+              </Nav.Link>
+
               <NavDropdown
                 title="Bài viết"
                 id="collapsible-nav-dropdown"
@@ -159,6 +170,7 @@ const NavbarComponent = () => {
                   </NavDropdown.Item>
                 ))}
               </NavDropdown>
+              
               <Nav.Link
                 className={`custom-hover capitalize text-center btn-border-bottom ${
                   activeCategory === "about me" ? "btn-active" : ""

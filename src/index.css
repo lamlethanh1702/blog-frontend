@@ -173,6 +173,10 @@
   background-color: #b4e7ad;
   width: 500px !important;
 }
+.navbar-brand img {
+  max-height: 40px;
+  margin-right: 10px;
+}
 
 .navbar-color {
   background-color: #b4e7ad;
