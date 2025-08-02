@@ -15,6 +15,7 @@ import SideNav from "./components/sidenavbar.component";
 import ManageBlogs from "./pages/manage-blogs.page";
 import ChangePassword from "./pages/change-password.page";
 import CurrentCategory from "./pages/current_category.page";
+import FooterComponent from "./components/footer.component";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
@@ -75,6 +76,7 @@ const App = () => {
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
+      <FooterComponent />
     </UserContext.Provider>
   );
 };

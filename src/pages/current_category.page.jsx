@@ -17,7 +17,7 @@ import SidebarHomepage from "./sidebar_homepage.page";
 const Header = () => {
   return (
     <div className="header-page text-center py-6">
-      <h1 className="text-4xl font-bold">The Hygge Explorer</h1>
+      <h1 className="text-4xl font-bold">CÔNG TY TNHH MTV DỊCH VỤ - CÔNG ÍCH QUẬN 6</h1>
       
     </div>
   );
@@ -26,7 +26,7 @@ const Header = () => {
 const CurrentCategory = () => {
   let [blogs, setBlog] = useState(null);
   let [trendingBlogs, setTrendingBlog] = useState(null);
-  let [pageState, setPageState] = useState("home");
+  let [pageState, setPageState] = useState("Trang chủ");
   const { category } = useParams(); // Lấy category từ URL
   const [searchBoxVisibility, setSearchBoxVisibility] = useState(false);
   let navigate = useNavigate();
@@ -109,7 +109,7 @@ const CurrentCategory = () => {
 
     setBlog(null);
     if (pageState == category) {
-      setPageState("home");
+      setPageState("Trang chủ");
       return;
     }
 

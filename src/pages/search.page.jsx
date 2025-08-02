@@ -25,7 +25,7 @@ const Header = () => {
 
 const SearchPage = () => {
   let { query } = useParams();
-  let [pageState, setPageState] = useState("home");
+  let [pageState, setPageState] = useState("Trang chủ");
   let [trendingBlogs, setTrendingBlog] = useState(null);
   let [blogs, setBlog] = useState(null);
   let [users, setUsers] = useState(null);
@@ -38,7 +38,7 @@ const SearchPage = () => {
     setBlog(null);
 
     if (pageState == category) {
-      setPageState("home");
+      setPageState("Trang chủ");
       return;
     }
 
@@ -77,7 +77,7 @@ const SearchPage = () => {
   useEffect(() => {
     activeTabRef.current.click();
 
-    if (pageState == "home") {
+    if (pageState == "Trang chủ") {
       fetchLatestBlogs({ page: 1 });
     } else {
       fetchBlogsByCategory({ page: 1 });

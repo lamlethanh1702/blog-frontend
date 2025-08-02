@@ -25,7 +25,7 @@ const Header = () => {
 const HomePage = () => {
   let [blogs, setBlog] = useState(null);
   let [trendingBlogs, setTrendingBlog] = useState(null);
-  let [pageState, setPageState] = useState("home");
+  let [pageState, setPageState] = useState("Trang chủ");
   const [searchBoxVisibility, setSearchBoxVisibility] = useState(false);
   const location = useLocation();
   let navigate = useNavigate();
@@ -128,7 +128,7 @@ const HomePage = () => {
     setBlog(null);
 
     if (pageState == category) {
-      setPageState("home");
+      setPageState("Trang chủ");
       return;
     }
 
@@ -138,7 +138,7 @@ const HomePage = () => {
   useEffect(() => {
     activeTabRef.current.click();
 
-    if (pageState == "home") {
+    if (pageState == "Trang chủ") {
       fetchLatestBlogs({ page: 1 });
     } else {
       fetchBlogsByCategory({ page: 1 });
@@ -190,7 +190,7 @@ const HomePage = () => {
               <LoadMoreDataBtn
                 state={blogs}
                 fetchDataFunc={
-                  pageState == "home" ? fetchLatestBlogs : fetchBlogsByCategory
+                  pageState == "Trang chủ" ? fetchLatestBlogs : fetchBlogsByCategory
                 }
               />
             </>
